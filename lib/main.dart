@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shoping_api_statmanagment/Stat_manageMent/Provider/SiginupProvider.dart';
 import 'package:shoping_api_statmanagment/pages/loginpage.dart';
 import 'package:shoping_api_statmanagment/pages/signup_page.dart';
 import 'package:shoping_api_statmanagment/pages/welcomepage.dart';
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(providers: [
       ChangeNotifierProvider(create: (context)=>SplachProvider()),
+      ChangeNotifierProvider(create: (context)=>SignupProvider()),
     ],
       child:  MaterialApp(
         title: 'Flutter Demo',

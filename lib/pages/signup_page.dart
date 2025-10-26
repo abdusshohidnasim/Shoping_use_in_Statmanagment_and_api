@@ -21,29 +21,51 @@ class SignupPage extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(20),
-              child: Column(children: [
-                TextFromFilt(LabelText: 'Username'),
-                SizedBox(height: 10),
-        
-                TextFromFilt(
-                  LabelText: 'Email',
-                  Icon: Icon(Icons.check, color: Colors.green),
-                ),
-                SizedBox(height: 10),
-                TextFromFilt(LabelText: 'Password', Icon: Icon(Icons.visibility_off)),
-                SizedBox(height: 10),
-                ButtonButtomText(
-                  fristext: "By continuing you agree to our ",
-                  secendtext: "Terms of Service", mainAxisAlignment: MainAxisAlignment.start,
-                ),
-                ButtonButtomText(fristext: "and", secendtext: " Privacy Policy",mainAxisAlignment: MainAxisAlignment.start,),
-                SizedBox(height: 20,),
-                BigButton(text: "Sign Up",onTab: (){}),
-                SizedBox(height: 20),
-                ButtonButtomText(fristext: "Already have an account? ", secendtext: "Singup", mainAxisAlignment: MainAxisAlignment.center)
-              ],),
-            )
-        
+              child: Column(
+                children: [
+                  TextFromFilt(LabelText: 'Username'),
+                  SizedBox(height: 10),
+
+                  TextFromFilt(
+                    LabelText: 'Email',
+                    Icon: Icon(Icons.check, color: Colors.green),
+                  ),
+                  SizedBox(height: 10),
+                  TextFromFilt(
+                    LabelText: 'Password',
+                    Icon: Icon(Icons.visibility_off),
+                  ),
+                  SizedBox(height: 10),
+                  ButtonButtomText(
+                    fristext: "By continuing you agree to our ",
+                    secendtext: "Terms of Service",
+                    mainAxisAlignment: MainAxisAlignment.start,
+                  ),
+                  ButtonButtomText(
+                    fristext: "and",
+                    secendtext: " Privacy Policy",
+                    mainAxisAlignment: MainAxisAlignment.start,
+                  ),
+                  SizedBox(height: 20),
+
+                  BigButton(
+                    text: "Sign Up",
+                    onTab: () {
+                      Navigator.pushNamed(context, "/Loginpage");
+                    },
+                  ),
+                  SizedBox(height: 20),
+                  ButtonButtomText(
+                    fristext: "Already have an account? ",
+                    onTab: () {
+                      Navigator.pushNamed(context, "/Loginpage");
+                    },
+                    secendtext: "Login",
+                    mainAxisAlignment: MainAxisAlignment.center,
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),

@@ -6,6 +6,8 @@ import 'package:shoping_api_statmanagment/pages/signup_page.dart';
 import 'package:shoping_api_statmanagment/pages/welcomepage.dart';
 import 'package:shoping_api_statmanagment/pages/splash_Screen.dart';
 
+import 'Stat_manageMent/Provider/LoginProvider.dart';
+import 'Stat_manageMent/Provider/passwordvisibilityprovider.dart';
 import 'Stat_manageMent/Provider/splacescreen provider.dart';
 
 void main() {
@@ -21,6 +23,8 @@ class MyApp extends StatelessWidget {
     return MultiProvider(providers: [
       ChangeNotifierProvider(create: (context)=>SplachProvider()),
       ChangeNotifierProvider(create: (context)=>SignupProvider()),
+      ChangeNotifierProvider(create: (context)=>LoginProvider()),
+      ChangeNotifierProvider(create: (context)=>PasswordVisibilityProvider()),
     ],
       child:  MaterialApp(
         title: 'Flutter Demo',
